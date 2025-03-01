@@ -1,11 +1,25 @@
 import type { Metadata } from 'next';
 import '../index.css';
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { Rammetto_One } from 'next/font/google';
 
 export const metadata: Metadata = {
-    title: "Jacob's Games",
-    description: "My Mario Game Collection",
+    title: "PokéMelody",
+    description: "PokéMelody",
 }
+
+const branding = {
+  '--color-primary': 'hsl(198, 50%, 10%)',
+  '--color-secondary': 'hsl(198, 50%, 90%)',
+  '--color-tertiary': 'hsl(258, 80%, 80%)',
+  '--color-accent': 'hsl(138, 80%, 80%)',
+} as React.CSSProperties;
+
+const rammettoOne = Rammetto_One({
+  variable: '--test',
+  subsets: ['latin'],
+  weight: '400',
+});
 
 export default function RootLayout({
     children,
@@ -29,8 +43,8 @@ export default function RootLayout({
             </script>
           </head>
         <body>
-            <div id="root">{children}</div>
-            <GoogleAnalytics gaId={`${process.env.GOOGLE_ANALYTICS_ID}`}/>
+          <div style={{ ...branding }} className={rammettoOne.variable} id="root">{children}</div>
+          <GoogleAnalytics gaId={`${process.env.GOOGLE_ANALYTICS_ID}`}/>
         </body>
         </html>
 

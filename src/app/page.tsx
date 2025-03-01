@@ -1,8 +1,7 @@
-'use client';
+'use client'
 
-import { GameCollectionList } from 'src/components/game-collection-list/game-collection-list';
-import '../index.css'
- 
+import { Homepage } from 'src/components/homepage/homepage';
+
 export default function Page() {
-  return <GameCollectionList />
+    return <Homepage />
 }

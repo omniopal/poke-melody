@@ -4,6 +4,6 @@
 import dynamic from 'next/dynamic';
 
 export default function Page() {
-    const DynamicMap = dynamic(() => import("../../components/pokemon-map/pokemon-map"), { ssr: false });
+    const DynamicMap = dynamic(() => import("../../components/freeplay-pokemon-map/freeplay-pokemon-map"), { ssr: false });
     return <DynamicMap />;
 }
