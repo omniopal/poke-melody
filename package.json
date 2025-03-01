@@ -1,0 +1,64 @@
+{
+  "homepage": "https://omniopal.github.io/",
+  "name": "website",
+  "version": "0.1.0",
+  "private": false,
+  "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^6.0.0",
+    "@mui/joy": "^5.0.0-beta.51",
+    "@mui/material": "^6.0.0",
+    "@next/third-parties": "^15.1.7",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "clsx": "^2.1.0",
+    "dotenv": "^16.4.5",
+    "firebase": "^10.13.0",
+    "framer-motion": "^12.3.1",
+    "next": "15.1",
+    "node": "^23.6.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-leaflet": "^5.0.0-rc.2",
+    "react-slideshow-image": "^4.3.1",
+    "seedrandom": "^3.0.5",
+    "typescript": "^5.3.3",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "next start",
+    "build": "next build",
+    "predeploy": "npm run build",
+    "deploy": "npm run build && gh-pages -d dist",
+    "dev": "next dev"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.16",
+    "@types/seedrandom": "^3.0.8",
+    "file-loader": "^6.2.0",
+    "gh-pages": "^6.1.1"
+  }
+}

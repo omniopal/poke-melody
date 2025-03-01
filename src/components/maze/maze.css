@@ -1,0 +1,140 @@
+.solution-container {
+    /* position: relative; */
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.image {
+    position: absolute;
+    /* max-width: 30rem; */
+    max-width: 90vw;
+    width: 100%;
+    height: auto;
+}
+
+.outer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.button {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    outline: 4px solid gray;
+}
+
+.button:active {
+    outline: 4px solid rgb(255, 73, 73);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    gap: 20px;
+}
+
+p {
+    margin-block-start: 0.5rem;
+    margin-block-end: 1rem;
+    font-weight: bold;
+}
+
+.selected {
+    outline: 4px solid rgb(255, 73, 73);
+}
+
+.image-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin-block-end: 0.5rem;
+    margin-block-start: 1rem;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.maze-container {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.image-and-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin-block-end: 0.5rem;
+}
+
+details {
+    margin-block-end: 0.5rem;
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 7.5rem;
+}
+
+.setting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 10rem; */
+}
+
+.settings {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-block-start: 0.5rem;
+}
+
+.setting-text {
+    text-wrap: wrap;
+    text-align: center;
+    font-weight: 500;
+    margin-block-end: 8px;
+}
+
+@media screen and (min-width: 600px) {
+    .image {
+        max-width: 30rem;
+    }
+
+    .button:hover {
+        outline: 4px solid rgb(255, 73, 73);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .settings-container {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .image-group {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 1536px) {
+    
+}

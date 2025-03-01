@@ -1,0 +1,116 @@
+.console-image-container {
+    margin-right: 1rem;
+    transition: all .1s ease-in-out;
+}
+
+.collapsible-button {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: nowrap;
+
+    /* Override iOS automatically rounding buttons */
+    -webkit-appearance: none;
+    border: 1px solid grey;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+    background-color: whitesmoke;
+    opacity: 90%;
+}
+
+.collapsible-button:hover {
+    background-color: #e2e2e2;
+}
+
+.console-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.chevron {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    align-items: center;
+    padding-left: 1rem;
+    color: black;
+}
+
+.name-and-release-date {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.console-release-date {
+    text-align: left;
+    font-size: 0.9rem;
+    color: black;
+}
+
+.top-button {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.bottom-button {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.curve-bottom-left {
+    z-index: 9999;
+    border-bottom-left-radius: 1rem;
+    /* box-shadow: 0px 10px 10px -8px rgba(0,0,0,0.63); */
+    box-shadow: 0px 10px 10px -8px rgba(206,147,226,1);
+}
+
+.curve-top-left {
+    border-top-left-radius: 1rem;
+    box-shadow: 0px -10px 10px -8px rgba(206,147,226,1);
+}
+
+h2 {
+    font-size: 1rem;
+    word-wrap: normal;
+    margin: 0;
+    text-align: left;
+    color: black;
+}
+
+h4 {
+    padding-left: 2rem;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+p {
+    margin: unset;
+    padding: 2rem;
+}
+
+@media screen and (min-width: 600px) {}
+
+@media screen and (min-width: 900px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .console-release-date {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .console-image-container:hover {
+        scale: 1.25;
+    }
+}
+
+@media screen and (min-width: 1536px) {}

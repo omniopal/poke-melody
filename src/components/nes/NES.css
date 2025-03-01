@@ -1,0 +1,423 @@
+@font-face {
+    font-family: 'NES Controller';
+    src: url('/fonts/NES.woff');
+}
+
+@font-face {
+    font-family: 'Pretendo';
+    src: url('/fonts/Pretendo.woff');
+}
+
+.nes-top {
+    display: flex;
+    flex-direction: row;
+}
+
+.nes-middle {
+    height: 0.25rem;
+    background-color: rgb(40,42,41);
+}
+
+.nes-bottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.nes-top-left {
+    background-color: rgb(197, 196, 193);
+    height: 12rem;
+    width: 100%;
+    flex: 0 0 100%;
+}
+
+.cart-slot-outline {
+    height: 90%;
+    border-left: 0.25rem solid rgb(40,42,41);
+    border-bottom: 0.25rem solid rgb(40,42,41);
+    border-bottom-left-radius: 1rem;
+    margin-inline-start: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cart-slot-text {
+    margin-inline-start: 10%;
+}
+
+.title {
+    margin-block-end: 1rem;
+    min-height: 4.5rem;
+}
+
+.nes-top-middle {
+    display: none;
+    background-color: rgb(40,42,41);
+    /* height: 20rem; */
+    height: 12rem;
+    /* width: 20%; */
+    flex: 0 0 20%;
+    /* min-width: 9rem; */
+}
+
+.nes-top-right {
+    display: none;
+    background-color: rgb(197, 196, 193);
+    height: 12rem;
+    width: 15vw;
+}
+
+.nes-bottom-left {
+    background: rgb(111,111,111);
+    background: linear-gradient(0deg, rgba(111,111,111,1) 0%, rgba(137,137,137,1) 100%);
+    height: 12rem;
+    width: 100%;
+    flex: 0 0 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.nes-bottom-middle {
+    background-color: rgb(40,42,41);
+    height: 12rem;
+    display: none;
+    justify-content: center;
+
+    /* Overlap bottom dark piece of NES to blend in to next section */
+    padding-bottom: 40px;
+    margin-bottom: -40px;
+    z-index: 1;
+}
+
+.nes-bottom-right {
+    display: none;
+    background: rgb(111,111,111);
+    background: linear-gradient(0deg, rgba(111,111,111,1) 0%, rgba(137,137,137,1) 100%);
+    height: 12rem;
+}
+
+.typewriter {
+    color: rgb(225, 1, 1);
+    font-size: 40px;
+    font-family: 'NES Controller';
+}
+
+.typewriter-cursor {
+    color: rgb(225, 1, 1);
+    font-size: 40px;
+    line-height: 4px;
+}
+
+.name {
+    color: rgb(225, 1, 1);
+    font-family: 'Pretendo';
+    font-size: 24px;
+}
+
+.power-light {
+    width: 2rem;
+    height: 2rem;
+    transition: all ease-in-out 0.1s;
+}
+
+.powered-on {
+    background-color: rgba(255, 1, 1, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 0 10px rgba(255, 0, 0, 0.3),  /* Outer glow */
+        inset 0 0 20px rgba(255, 255, 255, 0.2);  /* Inner highlight */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 4px;
+}
+
+.powered-off {
+    background-color: rgba(40, 42, 41, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);  /* Inner highlight */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 4px;
+}
+
+.nes-buttons {
+    width: 6rem;
+    height: 3rem;
+    border: 2px solid rgb(40,42,41);
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    user-select: none; /* Disable text selection on power/reset buttons */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.nes-buttons:hover {
+    cursor: pointer;
+}
+
+.nes-buttons-pushed {
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-inline-start: 1rem;
+    gap: 1rem;
+    color: rgb(225, 1, 1);
+}
+
+.nes-buttons-text {
+    font-family: 'NES Controller';
+    font-size: 1.75rem;
+    margin-inline-end: 4px;
+    margin-block-end: 4px;
+}
+
+.controller-ports {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.controller-port-container {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    width: 3.5rem;
+    height: 7rem;
+    background-color: black;
+    clip-path: polygon(43% 0, 100% 35%, 100% 100%, 0 100%, 0 0);
+    border-radius: 10px;
+}
+
+.controller-port {
+    position: absolute;
+    top: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+    right: 0.25rem;
+    width: 3rem;
+    height: 6.5rem;
+    background-color: rgb(56, 56, 56);
+    clip-path: polygon(43% 0, 100% 35%, 100% 100%, 0 100%, 0 0);
+    border-radius: 10px;
+}
+
+.second-controller-port {
+    display: none;
+}
+
+.controller-port-connector {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.connector-row {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.hidden-connector {
+    opacity: 0;
+}
+
+.pin {
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 100%;
+    background-color: white;
+}
+
+@media only screen and (min-width: 480px) {}
+
+@media only screen and (min-width: 768px) {
+    .nes-top-left, .nes-bottom-left {
+        width: 65%;
+        flex: 0 0 65%;
+    }
+
+    .nes-top-middle, .nes-bottom-middle {
+        width: 20%;
+        flex: 0 0 20%;
+    }
+
+    .second-controller-port, .nes-top-middle, .nes-bottom-middle, .nes-top-right, .nes-bottom-right {
+        display: flex;
+    }
+
+    .nes-top-right, .nes-bottom-right {
+        width: 15%;
+        flex: 0 0 15%;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .typewriter {
+        font-size: 50px;
+    }
+
+    .title {
+        min-height: 5.5rem;
+    }
+
+    .buttons {
+        margin-inline-start: 4rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .nes-top-left, .nes-top-middle, .nes-top-right, .nes-bottom-left, .nes-bottom-middle, .nes-bottom-right {
+        height: 16rem;
+    }
+
+    .nes-top-left, .nes-bottom-left {
+        width: 70%;
+        flex: 0 0 70%;
+    }
+
+    .nes-top-middle, .nes-bottom-middle {
+        width: 15%;
+        flex: 0 0 15%;
+    }
+
+    .nes-top-right, .nes-bottom-right {
+        width: 15%;
+        flex: 0 0 15%;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .typewriter {
+        font-size: 60px;
+    }
+
+    .title {
+        min-height: 6.5rem;
+    }
+
+    .nes-buttons {
+        width: 8rem;
+        height: 4rem;
+    }
+
+    .buttons {
+        margin-inline-start: 6rem;
+    }
+
+    .nes-buttons-text {
+        font-size: 2rem;
+        margin-inline-end: 6px;
+        margin-block-end: 6px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .nes-top-left, .nes-top-middle, .nes-top-right, .nes-bottom-left, .nes-bottom-middle, .nes-bottom-right {
+        height: 20rem;
+    }
+
+    .nes-top-left, .nes-bottom-left {
+        width: 70%;
+        flex: 0 0 70%;
+    }
+
+    .nes-top-middle, .nes-bottom-middle {
+        width: 15%;
+        flex: 0 0 15%;
+    }
+
+    .nes-top-right, .nes-bottom-right {
+        width: 15%;
+        flex: 0 0 15%;
+    }
+
+    .name {
+        font-size: 50px;
+    }
+
+    .typewriter {
+        font-size: 70px;
+    }
+
+    .title {
+        min-height: 6.5rem;
+    }
+
+    .nes-buttons {
+        width: 8rem;
+        height: 4rem;
+    }
+
+    .buttons {
+        margin-inline-start: 10rem;
+    }
+
+    .nes-buttons-text {
+        font-size: 2.25rem;
+        margin-inline-end: 6px;
+        margin-block-end: 6px;
+    }
+
+    .power-light {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .controller-ports {
+        gap: 1.5rem;
+    }
+
+    .controller-port-container {
+        width: 4.5rem;
+        height: 9rem;
+    }
+
+    .controller-port {
+        height: 8.5rem;
+        width: 4rem;
+    }
+
+    .connector-row {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .cart-slot-text {
+        margin-inline-start: 5%;
+    }
+
+    .cart-slot-outline {
+        margin-inline-start: 10%;
+    }
+}

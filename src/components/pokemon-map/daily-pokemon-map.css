@@ -1,0 +1,189 @@
+#map {
+    height: 287px;
+}
+
+.testing {
+    background-color: 'orange';
+}
+
+h2 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    color: hsl(198, 50%, 90%);
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    color: hsl(198, 50%, 90%);
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    /* margin-block-end: 8px; */
+}
+
+label {
+    color: hsl(198, 50%, 90%);
+}
+
+div {
+    color: hsl(198, 50%, 90%);
+}
+
+.town-name-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4px;
+}
+
+.town-name {
+    font-weight: 600;
+    color: hsl(138, 80%, 80%);
+    margin-block-end: 4px;
+}
+
+.town-name-title {
+    margin-block-end: 4px;
+}
+
+.stuff {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 90vw;
+}
+
+.daily-button {
+    -webkit-appearance: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px 12px 16px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background: hsl(258, 80%, 80%);
+    color: hsl(198, 50%, 10%);
+    border-radius: 8px;
+    padding: 14px 24px 16px;
+    font-weight: 700;
+    line-height: 1;
+    transition: transform 200ms;
+}
+
+.score-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+}
+
+.score {
+    color: hsl(138, 80%, 80%);
+    font-weight: 700;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.score-label {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+    margin-block-end: 8px;
+    margin-block-start: 12px;
+}
+
+.daily-button:hover {
+    filter: brightness(80%);
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.correct {
+    color: hsl(138, 80%, 80%);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.wrong {
+    /* color: red; */
+    color: hsl(348, 70%, 50%);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.timer-controls {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.region {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-block-start: 20px;
+    gap: 8px;
+    margin-block-end: 4px;
+}
+
+.construction {
+    color: yellow;
+}
+
+.theme-version-toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.play-original-theme {
+    margin-block-end: 4px;
+}
+
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    width: 60px;
+}
+
+.region-name {
+    color: hsl(138, 80%, 80%);
+    margin-inline-start: 8px;
+}
+
+.button-icon {
+    color: hsl(198, 50%, 10%);
+}
+
+:root {
+    --color-primary: hsl(198, 50%, 90%);
+    --color-secondary: hsl(198, 50%, 10%);
+    --color-tertiary: hsl(258, 80%, 20%);
+    --color-accent: hsl(138, 80%, 20%);
+}
+
+.dark {
+    --color-primary: hsl(198, 50%, 10%);
+    --color-secondary: hsl(198, 50%, 90%);
+    --color-tertiary: hsl(258, 80%, 80%);
+    --color-accent: hsl(138, 80%, 80%);
+}

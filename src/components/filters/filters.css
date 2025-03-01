@@ -1,0 +1,10 @@
+.filter-text {
+    margin-inline-start: 8px;
+    font-size: small;
+}
+
+@media screen and (min-width: 900px) {
+    .filter-text {
+        font-size: medium;
+    }
+}
