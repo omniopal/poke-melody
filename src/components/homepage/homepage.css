@@ -17,6 +17,7 @@ h1 {
     text-align: center;
     line-height: 1.2;
     margin-block-end: 8px;
+    margin-block-start: 8px;
 }
 
 .options {
@@ -54,7 +55,7 @@ h1 {
 .disclaimer {
     font-size: 10px;
     filter: brightness(50%);
-    max-width: 70vw;
+    max-width: 90vw;
     text-align: center;
 }
 
@@ -84,6 +85,10 @@ footer {
 
     .disclaimer {
         max-width: 60vw;
+    }
+
+    h1 {
+        margin-block-start: 24px;
     }
 }
 
